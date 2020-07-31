@@ -156,3 +156,6 @@ ReactDOM.render(
   document.getElementById('app')
 )
 ```
+
+### Ссылка на песочницу
+https://codesandbox.io/s/clever-ritchie-1xm7t
