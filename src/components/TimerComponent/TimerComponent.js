@@ -8,6 +8,7 @@ class TimerComponent extends React.PureComponent {
     currentTime: 0
   }
 
+
   componentWillUnmount() {
     clearInterval(this.interval)
   }
@@ -20,14 +21,15 @@ class TimerComponent extends React.PureComponent {
   //в методе handleStart setTimeout заменим на setInterval - так как надо
   // изменять состояние через интервал.
   // так как новое состояние зависит от предыдущего в this.setState
-  // передадим не объект, а функции, которая принимает предыдущее состояние
+  // передадим не объект, а функцию, которая принимает предыдущее состояние и
   // на его основании и модифицируем state
 
-  //setInterval - в качестве второго аргумента принимается кол-во милисекунд, через
+  // setInterval - в качестве второго аргумента принимается кол-во милисекунд, через
   // которые будет повторяться, поэтому переданные секунды в this.props.currentInterval
-  //переведем в милисекунды, умножим на 1000
+  // переведем в милисекунды, умножим на 1000
   handleStart = () => {
     const { currentInterval } = this.props
+    console.log('currentInterval from handleStart: ', currentInterval)
 
     if (currentInterval > 0) {
       this.interval = setInterval( () => {

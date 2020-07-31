@@ -7,6 +7,7 @@ class IntervalComponent extends React.Component {
 
   render() {
     const {currentInterval, changeInterval } = this.props
+    console.log('currentInterval: ', currentInterval)
 
     return (
       <div>

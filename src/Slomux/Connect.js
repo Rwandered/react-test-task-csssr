@@ -28,7 +28,7 @@ const connect = (mapStateToProps, mapDispatchToProps) => (Component) => {
         <Component
           {...mapStateToProps(this.store.getState(), this.props)}
           {...mapDispatchToProps(this.store.dispatch, this.props)}
-          ы{...this.props}
+          {...this.props}
         />
       );
     }
